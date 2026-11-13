@@ -38,10 +38,11 @@ footer .logo{width:110px;height:110px}
 @media print{.watermark{position:absolute}}
 /* header */
 header{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:100px}
-.brand{display:flex;align-items:center;gap:.9rem;font-family:var(--serif);font-weight:800;color:var(--navy);font-size:1.02rem;text-transform:uppercase;letter-spacing:.025em}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:100px}
+.nav>.btn{white-space:nowrap;padding:.75rem 1.2rem}
+.brand{display:flex;align-items:center;gap:.9rem;min-width:0;font-family:var(--serif);font-weight:800;color:var(--navy);font-size:1.02rem;text-transform:uppercase;letter-spacing:.025em}
 .mono{width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:.95rem;border:1.5px solid var(--gold)}
-nav ul{display:flex;gap:1.8rem;list-style:none;font-size:.92rem;font-weight:500}
+nav ul{display:flex;gap:1.3rem;list-style:none;font-size:.9rem;font-weight:500;white-space:nowrap}
 nav a:hover{color:var(--gold-d)}
 .btn{display:inline-block;padding:.85rem 1.6rem;font-weight:600;font-size:.95rem;border:1.5px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;font-family:inherit;transition:background .2s,color .2s}
 .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
@@ -79,6 +80,19 @@ nav a:hover{color:var(--gold-d)}
 .card h3{margin-bottom:.5rem}
 .card p{font-size:.96rem;color:var(--muted)}
 .note{margin-top:1.75rem;font-size:.9rem;color:var(--muted);max-width:75ch}
+
+/* founder photo */
+.person .photo{width:100%;height:auto;max-width:280px;aspect-ratio:1/1;object-fit:cover;object-position:center 12%;display:block;margin-bottom:1.5rem;border:1px solid var(--line);border-bottom:3px solid var(--gold);background:var(--paper)}
+
+/* collection gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+@media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr}}
+.item{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--navy)}
+.item:nth-child(3n+2){border-top-color:var(--gold)}
+.item .frame{aspect-ratio:1/1;background:#F4F1E8;display:grid;place-items:center;overflow:hidden}
+.item img{width:100%;height:100%;object-fit:contain;display:block}
+.item figcaption{padding:.9rem 1.1rem;font-family:var(--serif);font-weight:600;color:var(--navy);font-size:1rem}
 
 /* network */
 .network{background:var(--navy);color:#C7D0E0}
@@ -133,6 +147,14 @@ footer ul{list-style:none;display:flex;gap:1.4rem;flex-wrap:wrap}
 footer a:hover{color:var(--gold)}
 .legal{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #2A3C60;font-size:.8rem;line-height:1.7}
 
+@media(max-width:1080px){
+  nav{position:absolute;top:100px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0;padding:.5rem clamp(1.25rem,4vw,2.5rem) 1rem}
+  nav li a{display:block;padding:.75rem 0;border-bottom:1px solid var(--line)}
+  .menu{display:block}
+  .nav>.btn{display:none}
+}
 @media(max-width:820px){
   nav{position:absolute;top:100px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);display:none}
   nav.open{display:block}
@@ -156,6 +178,7 @@ footer a:hover{color:var(--gold)}
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#business">Our Business</a></li>
+        <li><a href="#collection">Collection</a></li>
         <li><a href="#network">Network</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#legal-notice">Legal notice</a></li>
@@ -215,6 +238,26 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
+<section id="collection">
+  <div class="wrap">
+    <p class="kicker">Featured items</p>
+    <h2>A glimpse of the collection.</h2>
+    <p class="lead">Representative coins, bronzes and antique metalware from the categories we work with.</p>
+    <div class="gallery">
+      <figure class="item"><div class="frame"><img src="images/bank-token-coin.jpg" alt="Antique One Penny bank token coin held in a hand" loading="lazy"></div><figcaption>Antique bank token coin</figcaption></figure>
+      <figure class="item"><div class="frame"><img src="images/elephant-coin-1808.jpg" alt="Antique coin showing an elephant and the date 1808" loading="lazy"></div><figcaption>Elephant coin, dated 1808</figcaption></figure>
+      <figure class="item"><div class="frame"><img src="images/brass-coin.jpg" alt="Antique brass coin with deity figures under a canopy" loading="lazy"></div><figcaption>Antique brass coin</figcaption></figure>
+      <figure class="item"><div class="frame"><img src="images/copper-coin.jpg" alt="Antique copper coin showing a standing figure and eagle" loading="lazy"></div><figcaption>Antique copper coin</figcaption></figure>
+      <figure class="item"><div class="frame"><img src="images/bronze-idol.jpg" alt="Bronze standing deity idol on a lotus base" loading="lazy"></div><figcaption>Bronze deity idol</figcaption></figure>
+      <figure class="item"><div class="frame"><img src="images/iron-trident.jpg" alt="Antique iron trident on a stand" loading="lazy"></div><figcaption>Antique iron trident</figcaption></figure>
+      <figure class="item"><div class="frame"><img src="images/copper-vessel.jpg" alt="Antique hammered copper vessel" loading="lazy"></div><figcaption>Antique copper vessel</figcaption></figure>
+      <figure class="item"><div class="frame"><img src="images/copper-ewer.jpg" alt="Antique engraved copper ewer with curved handle" loading="lazy"></div><figcaption>Antique copper ewer</figcaption></figure>
+      <figure class="item"><div class="frame"><img src="images/silver-tumblers.jpg" alt="Engraved antique silver-toned tumblers" loading="lazy"></div><figcaption>Engraved metal tumblers</figcaption></figure>
+    </div>
+    <p class="note">Images are for illustration only. Age, authenticity, ownership and availability of any item are subject to verification and applicable laws.</p>
+  </div>
+</section>
+
 <section class="network" id="network">
   <div class="wrap">
     <p class="kicker" style="color:var(--gold)">International network</p>
@@ -261,6 +304,7 @@ footer a:hover{color:var(--gold)}
     <p class="lead">Expertise across legal matters, land and property, finance, precious metals and international export management.</p>
     <div class="people">
       <article class="person">
+        <img class="photo" src="images/founder.jpg" alt="Bharatkumar Simpy, Founder" width="688" height="930" loading="lazy">
         <h3>Bharatkumar Simpy</h3>
         <p class="role">Founder</p>
         <ul><li>Legal matters and advisory</li><li>Land and property management</li><li>Finance and business development</li></ul>
@@ -326,7 +370,7 @@ footer a:hover{color:var(--gold)}
       <a href="#top" class="brand"><img class="logo" src="logo.png" alt="Precious Metals (India) Inc. logo" width="84" height="84">Precious Metals (India) Inc.</a>
       <ul>
         <li><a href="#about">About</a></li><li><a href="#business">Our Business</a></li>
-        <li><a href="#network">Network</a></li><li><a href="#leadership">Leadership</a></li><li><a href="#legal-notice">Legal notice</a></li><li><a href="#contact">Contact</a></li>
+        <li><a href="#collection">Collection</a></li><li><a href="#network">Network</a></li><li><a href="#leadership">Leadership</a></li><li><a href="#legal-notice">Legal notice</a></li><li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <p class="legal">© <span id="yr"></span> <strong>PRECIOUS METALS (INDIA) INC.</strong> All rights reserved. All business activities involving precious metals, antiquities, historical artifacts and collectible materials are subject to applicable laws, licensing, ownership verification, import-export restrictions and regulatory requirements.</p>
