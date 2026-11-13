@@ -125,6 +125,13 @@ nav a:hover{color:var(--gold-d)}
 .combined span{font-size:.9rem;color:var(--muted)}
 .combined p{flex:1;min-width:240px;color:var(--ink)}
 
+/* founder gallery */
+.fgallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+@media(max-width:900px){.fgallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.fgallery{grid-template-columns:1fr}}
+.fgallery a{display:block;aspect-ratio:4/3;background:#F4F1E8;border:1px solid var(--line);border-bottom:3px solid var(--gold)}
+.fgallery img{width:100%;height:100%;object-fit:contain;display:block}
+
 /* contact */
 .contact{background:var(--paper);text-align:center}
 .contact .lead{margin:0 auto 2rem}
@@ -181,6 +188,7 @@ footer a:hover{color:var(--gold)}
         <li><a href="#collection">Collection</a></li>
         <li><a href="#network">Network</a></li>
         <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#founder-gallery">Gallery</a></li>
         <li><a href="#legal-notice">Legal notice</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -326,6 +334,28 @@ footer a:hover{color:var(--gold)}
   </div>
 </section>
 
+<section id="founder-gallery">
+  <div class="wrap">
+    <p class="kicker">Founder gallery</p>
+    <h2>Moments from the founder’s journey.</h2>
+    <div class="fgallery">
+      <a href="images/founder-01.jpg" target="_blank" rel="noopener"><img src="images/founder-01.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 1" loading="lazy"></a>
+      <a href="images/founder-02.jpg" target="_blank" rel="noopener"><img src="images/founder-02.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 2" loading="lazy"></a>
+      <a href="images/founder-03.jpg" target="_blank" rel="noopener"><img src="images/founder-03.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 3" loading="lazy"></a>
+      <a href="images/founder-04.jpg" target="_blank" rel="noopener"><img src="images/founder-04.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 4" loading="lazy"></a>
+      <a href="images/founder-05.jpg" target="_blank" rel="noopener"><img src="images/founder-05.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 5" loading="lazy"></a>
+      <a href="images/founder-06.jpg" target="_blank" rel="noopener"><img src="images/founder-06.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 6" loading="lazy"></a>
+      <a href="images/founder-07.jpg" target="_blank" rel="noopener"><img src="images/founder-07.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 7" loading="lazy"></a>
+      <a href="images/founder-08.jpg" target="_blank" rel="noopener"><img src="images/founder-08.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 8" loading="lazy"></a>
+      <a href="images/founder-09.jpg" target="_blank" rel="noopener"><img src="images/founder-09.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 9" loading="lazy"></a>
+      <a href="images/founder-10.jpg" target="_blank" rel="noopener"><img src="images/founder-10.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 10" loading="lazy"></a>
+      <a href="images/founder-11.jpg" target="_blank" rel="noopener"><img src="images/founder-11.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 11" loading="lazy"></a>
+      <a href="images/founder-12.jpg" target="_blank" rel="noopener"><img src="images/founder-12.jpg" alt="Founder Bharatkumar Simpy at a meeting, photo 12" loading="lazy"></a>
+    </div>
+    <p class="note">Photographs are shown for documentation of the founder’s meetings and events only. They do not imply endorsement of, or any commercial association between, this business and any person or office pictured.</p>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="wrap">
     <p class="kicker">Global business enquiries</p>
@@ -370,7 +400,7 @@ footer a:hover{color:var(--gold)}
       <a href="#top" class="brand"><img class="logo" src="logo.png" alt="Precious Metals (India) Inc. logo" width="84" height="84">Precious Metals (India) Inc.</a>
       <ul>
         <li><a href="#about">About</a></li><li><a href="#business">Our Business</a></li>
-        <li><a href="#collection">Collection</a></li><li><a href="#network">Network</a></li><li><a href="#leadership">Leadership</a></li><li><a href="#legal-notice">Legal notice</a></li><li><a href="#contact">Contact</a></li>
+        <li><a href="#collection">Collection</a></li><li><a href="#network">Network</a></li><li><a href="#leadership">Leadership</a></li><li><a href="#founder-gallery">Gallery</a></li><li><a href="#legal-notice">Legal notice</a></li><li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <p class="legal">© <span id="yr"></span> <strong>PRECIOUS METALS (INDIA) INC.</strong> All rights reserved. All business activities involving precious metals, antiquities, historical artifacts and collectible materials are subject to applicable laws, licensing, ownership verification, import-export restrictions and regulatory requirements.</p>
