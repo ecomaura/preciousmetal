@@ -105,11 +105,23 @@ nav a:hover{color:var(--gold-d)}
 .item figcaption{padding:.9rem 1.1rem;font-family:var(--serif);font-weight:600;color:var(--navy);font-size:1rem}
 
 /* network */
-.network{background:var(--navy);color:#C7D0E0}
-.network h2{color:#fff}
-.network .lead{color:#B9C3D6}
-.chips{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:2rem;list-style:none}
-.chips li{border:1px solid #3A4C6E;padding:.55rem 1.05rem;font-size:.95rem;color:#fff}
+.network{background:linear-gradient(180deg,#FBF7EC 0%,#F3EBD6 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.network .head{text-align:center;max-width:780px;margin:0 auto}
+.network .head h2{letter-spacing:.02em;text-transform:uppercase;margin-bottom:.4rem}
+.network .tagline{font-size:.85rem;font-weight:600;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:1rem}
+.network .sub{font-family:var(--serif);font-size:1.35rem;color:var(--navy);font-weight:600;margin-bottom:.5rem}
+.network .head p.lead{margin:0 auto;max-width:62ch}
+.net-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem 1.5rem;margin-top:2.5rem;list-style:none;grid-template-rows:repeat(6,auto);grid-auto-flow:column}
+@media(max-width:760px){.net-grid{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}}
+.net-item{display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.75);border:1px solid #E6D9B5;border-radius:10px;padding:.8rem 1rem;box-shadow:0 1px 0 rgba(195,154,63,.15)}
+.net-no{flex:none;min-width:52px;height:46px;display:grid;place-items:center;background:var(--navy);color:#fff;font-family:var(--serif);font-weight:600;font-size:1.15rem;border-radius:8px;border-right:4px solid var(--gold)}
+.net-item h3{font-size:1.05rem;line-height:1.25}
+.net-item .serial{display:block;font-size:.74rem;font-weight:600;letter-spacing:.1em;color:var(--gold-d);margin-bottom:.1rem;font-family:var(--sans)}
+.net-item p{font-size:.88rem;color:var(--muted);line-height:1.35}
+.net-note{display:flex;gap:.75rem;align-items:flex-start;margin-top:2rem;padding-top:1.25rem;border-top:1px solid #E1D3A8;font-size:.88rem;font-style:italic;color:var(--ink)}
+.net-note i{flex:none;width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:2rem;list-style:none;justify-content:center}
+.chips li{border:1px solid #D9C791;background:rgba(255,255,255,.6);padding:.5rem 1rem;font-size:.9rem;color:var(--navy)}
 
 /* why + values */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem)}
@@ -280,9 +292,25 @@ footer a:hover{color:var(--gold)}
 
 <section class="network" id="network">
   <div class="wrap">
-    <p class="kicker" style="color:var(--gold)">International network</p>
-    <h2>Connecting buyers across countries.</h2>
-    <p class="lead">We are building relationships with the people and organizations who move these markets.</p>
+    <div class="head">
+      <h2>International Network</h2>
+      <p class="tagline">People · Knowledge · Connections</p>
+      <p class="sub">Local expertise. Global perspective.</p>
+      <p class="lead">An international professional network spanning research, academia and industry.</p>
+    </div>
+    <ul class="net-grid">
+        <li class="net-item"><span class="net-no" aria-hidden="true">01</span><div><span class="serial">PMI - 0001</span><h3>Aryankumar Verma</h3><p>Ph.D. Scholar · Madhya Pradesh, India</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">02</span><div><span class="serial">PMI - 0002</span><h3>David Mugambi</h3><p>Assistant Lecturer · Chuka University, Kenya</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">03</span><div><span class="serial">PMI - 0003</span><h3>Kimbely Milk</h3><p>Ph.D. Scholar · Denver, USA</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">04</span><div><span class="serial">PMI - 0004</span><h3>Derrick Brown</h3><p>Metallurgist · Carolina, USA</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">05</span><div><span class="serial">PMI - 0005</span><h3>Elina Molina</h3><p>Spain · Europe</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">06</span><div><span class="serial">PMI - 0006</span><h3>Elisa Marvin</h3><p>London, United Kingdom</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">07</span><div><span class="serial">PMI - 0007</span><h3>Adrian Dance</h3><p>Ph.D. Scholar · Vancouver, Canada</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">08</span><div><span class="serial">PMI - 0008</span><h3>Oliver Hando</h3><p>Germany · Europe</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">09</span><div><span class="serial">PMI - 0009</span><h3>Nathan Rutherford</h3><p>Sydney, Australia</p></div></li>
+        <li class="net-item"><span class="net-no" aria-hidden="true">10</span><div><span class="serial">PMI - 0010</span><h3>Errik Kasparov</h3><p>Moscow, Russia</p></div></li>
+    </ul>
+    <p class="net-note"><i aria-hidden="true">i</i><span>Network listings do not by itself imply employment, directorship, agency, formal representation or endorsement. Titles, spellings, affiliations and consent to publish must be verified.</span></p>
     <ul class="chips">
       <li>International buyers and sellers</li><li>Precious metal traders</li><li>Antique dealers and collectors</li>
       <li>Numismatic collectors</li><li>Historical artifact collectors</li><li>Importers and exporters</li>
